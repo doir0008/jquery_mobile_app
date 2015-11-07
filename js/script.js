@@ -1,5 +1,3 @@
-// Insert code below
-
 var scriptsLoaded = 0;
 
 document.addEventListener("DOMContentLoaded", function() {
@@ -28,12 +26,12 @@ function buildWidget(container) {
 }
 
 function displayWidget() {
-
+    // do stuff
 }
 
 function loadCount() {
     scriptsLoaded++;
     if (scriptsLoaded === 2) {
-        buildWidget(".weather-forecast");
+        buildWidget(".tutorial");
     }
 }

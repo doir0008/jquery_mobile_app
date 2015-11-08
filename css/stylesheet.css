@@ -4,11 +4,17 @@
     padding: 0;
 }
 header {
-    
+    padding: 40px;
 }
 .wrapper {
-    
+
 }
 footer {
-    
+    padding: 40px;
+    clear: both;
+}
+img {
+    width: 20%;
+    float: left;
+    padding: 10px;
 }

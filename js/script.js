@@ -1,37 +1,37 @@
-var scriptsLoaded = 0;
+$(document).on('mobileinit', function( ) {
+    // our code goes here to override any settings
+    // this event runs as jQuery starts to prepare the page as a jQuery Mobile page
+    // here we would set up default messages to the user and time delays for events like taphold.
+    // or cross-domain requests for pages or data
+ $.mobile.allowCrossDomainPages = true;
+ $.support.cors = true;
+}); 
 
-document.addEventListener("DOMContentLoaded", function() {
-  var css = document.createElement("link");
-  css.setAttribute("rel", "stylesheet");
-  css.setAttribute("href", "css/stylesheet.css"); 
-  css.addEventListener("load", loadCount);
-  document.querySelector("head").appendChild(css);
-  var jq = document.createElement("script");
-  jq.addEventListener("load", loadCount);
-  jq.setAttribute("src","//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js");
-  document.querySelector("head").appendChild(jq);
+$("#home").on('pageinit', function( ) {
+    //inside here is where we place code that runs when a page has been enhanced
+    //here we can start to work with the jQuery elements on the page.
 });
 
-function buildWidget(container) {
-    $.ajax({
-        url: "https://api.forecast.io/forecast/07d46afa175283585f2ddf2b3d1dc17f/45.348391,-75.757045?units=ca",
-        type: "GET",
-        dataType: "jsonp"
-    }).done(function(response) {
-        displayWidget(response.currently,response.hourly,container); 
-        console.log(response.currently,response.hourly,container);
-    }).fail(function() {
-        alert("An error occurred, please try again.");
-    });
-}
 
-function displayWidget() {
-    // do stuff
-}
 
-function loadCount() {
-    scriptsLoaded++;
-    if (scriptsLoaded === 2) {
-        buildWidget(".tutorial");
-    }
-}
+
+// load new page
+$.mobile.pageContainer.pagecontainer("change", "#contact", {userCount:12});
+
+/// get id of new page on change
+
+$(document).on('pagechange', function (ev, data) {
+
+ console.log(data.toPage.attr('id'));
+
+});
+
+ 
+
+// or similar, an event specific to each div#id
+
+$('#lesson1').on('pageshow', function (ev, data) {
+
+  console.log("lesson 1 shown");
+
+});

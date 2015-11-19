@@ -2,25 +2,233 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Ryan's jQuery Mobile App - Home</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Two bucket wash method</title>
     <link rel="stylesheet" href="css/stylesheet.css">
+    <link rel="stylesheet" href="themes/custom-theme.min.css" />
+	<link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css" />
+	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+	<script src="js/script.js"></script>
+	<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 </head>
 <body>
-    <header id="banner">
-        <!-- put stuff here -->   
-    </header>
-    <div id="wrapper">
-        <section>
+    <!-- Home Page -->
+    <section data-role="page" id="home">
+        <!-- Header -->
+        <div data-role="header">
+           <h1>Two bucket wash method</h1> 
+        </div>
+        <!-- Content -->
+        <article data-role="content" class="ui-content">
             <h2>About this App</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium labore rerum asperiores cum iusto optio aspernatur, rem quam voluptatem inventore veniam, nisi consequatur debitis dolore ipsam deleniti dolorum quod non.</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem perferendis adipisci necessitatibus quibusdam minima dicta assumenda natus, quo quos. Facere omnis odit velit sequi soluta illum cum distinctio repellendus architecto.</p>
-        </section>
-    </div>
-    <footer id="footer">
-        <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Info</a></li>
-        </ul>
-    </footer>
+            <p>This app is intended to explain the "Two bucket wash method" used to properly wash a car and keep its exterior properly cleared and maintained.</p>
+            <p>The "two bucket wash method" uses two wash buckets, as indicated, to separate clean and dirty water, minimizing any possible damage that may be caused to the coats of paint on your car. It is highly recommended using this method if you care to keep your car in good-condition.</p>
+            <p><a href="#step1">Begin Tutorial</a></p>
+        </article>
+        <!-- Footer -->
+        <div data-role="footer"> 
+            <div data-role="navbar">
+                <ul>
+                    <li><a href="#home" class="ui-btn ui-state-disabled" data-icon="home" data-iconpos="top">Home</a>
+                    </li>
+                    <li><a href="#info" class="ui-btn" data-icon="info" data-iconpos="top">About Me</a>
+                   </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+   <!-- About Me Page -->
+    <section data-role="page" id="info">
+        <!-- Header -->
+        <div data-role="header">
+           <h1>Two bucket wash method</h1> 
+        </div>
+        <!-- Content -->
+        <article data-role="content" class="ui-content">
+            <h2>About the Developer</h2>
+            <img src="../images/mini1.jpg" alt="Picture of Ryan's 2014 Mini Cooper S"/>
+            <p>Hi! My name is Ryan Doiron and I developed this app. I love programming and decided to go back to school to take Mobile Application Design &amp; Development.</p>
+            <p>I love my Mini Cooper S, I bought it back in 2014 and it is the first new car I have ever owned. I intent to keep it well maintained and I thought it would be nice to share some information on how I just do that through the two bucket wash method.</p>
+        </article>
+        <!-- Footer -->
+        <div data-role="footer"> 
+            <div data-role="navbar">
+                <ul>
+                    <li><a href="#home" class="ui-btn" data-icon="home" data-iconpos="top">Home</a>
+                    </li>
+                    <li><a href="#info" class="ui-btn ui-state-disabled" data-icon="info" data-iconpos="top">About Me</a>
+                   </li>
+                </ul>
+            </div>
+        </div>
+   </section>
+   
+   
+   
+   
+   
+   
+   
+   
+    <!-- Dialogs Begin -->
+    <!-- Step 1 -->
+    <section data-role="page" id="step1" data-dialog="true">
+        <!-- Header -->
+        <div data-role="header">
+           <h1>Step 1</h1> 
+        </div>
+        <!-- Content -->
+        <article data-role="content" class="ui-content" >
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto quod itaque, adipisci fuga ad! Fugit itaque nisi porro reprehenderit tempora culpa asperiores a maxime qui ad quasi architecto ullam, beatae.</p>
+        </article>
+        <!-- Footer -->
+        <div data-role="footer"> 
+            <div data-role="navbar">
+                <ul>
+                    <li><a href="#home" class="ui-btn ui-state-disabled" data-icon="home" data-iconpos="top">Back</a>
+                    </li>
+                    <li><a href="#step2" class="ui-btn" data-icon="info" data-iconpos="top" data-transition="flip">Next</a>
+                   </li>
+                </ul>
+            </div>
+        </div>
+   </section>
+   <!-- Step 2 -->
+    <section data-role="page" id="step2" data-dialog="true">
+        <!-- Header -->
+        <div data-role="header">
+           <h1>Step 2</h1> 
+        </div>
+        <!-- Content -->
+        <article data-role="content" class="ui-content" >
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto quod itaque, adipisci fuga ad! Fugit itaque nisi porro reprehenderit tempora culpa asperiores a maxime qui ad quasi architecto ullam, beatae.</p>
+        </article>
+        <!-- Footer -->
+        <div data-role="footer"> 
+            <div data-role="navbar">
+                <ul>
+                    <li><a href="#step1" class="ui-btn" data-icon="home" data-iconpos="top">Back</a>
+                    </li>
+                    <li><a href="#step3" class="ui-btn" data-icon="info" data-iconpos="top">Next</a>
+                   </li>
+                </ul>
+            </div>
+        </div>
+   </section>
+   <!-- Step 3 -->
+   <section data-role="page" id="step3" data-dialog="true">
+        <!-- Header -->
+        <div data-role="header">
+           <h1>Step 3</h1> 
+        </div>
+        <!-- Content -->
+        <article data-role="content" class="ui-content" >
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto quod itaque, adipisci fuga ad! Fugit itaque nisi porro reprehenderit tempora culpa asperiores a maxime qui ad quasi architecto ullam, beatae.</p>
+        </article>
+        <!-- Footer -->
+        <div data-role="footer"> 
+            <div data-role="navbar">
+                <ul>
+                    <li><a href="#step2" class="ui-btn" data-icon="home" data-iconpos="top">Back</a>
+                    </li>
+                    <li><a href="#step4" class="ui-btn" data-icon="info" data-iconpos="top">Next</a>
+                   </li>
+                </ul>
+            </div>
+        </div>
+   </section>
+   <!-- Step 4 -->
+    <section data-role="page" id="step4" data-dialog="true">
+        <!-- Header -->
+        <div data-role="header">
+           <h1>Step 4</h1> 
+        </div>
+        <!-- Content -->
+        <article data-role="content" class="ui-content" >
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto quod itaque, adipisci fuga ad! Fugit itaque nisi porro reprehenderit tempora culpa asperiores a maxime qui ad quasi architecto ullam, beatae.</p>
+        </article>
+        <!-- Footer -->
+        <div data-role="footer"> 
+            <div data-role="navbar">
+                <ul>
+                    <li><a href="#step3" class="ui-btn" data-icon="home" data-iconpos="top">Back</a>
+                    </li>
+                    <li><a href="#step5" class="ui-btn" data-icon="info" data-iconpos="top">Next</a>
+                   </li>
+                </ul>
+            </div>
+        </div>
+   </section>
+   <!-- Step 5 -->
+    <section data-role="page" id="step5" data-dialog="true">
+        <!-- Header -->
+        <div data-role="header">
+           <h1>Step 5</h1> 
+        </div>
+        <!-- Content -->
+        <article data-role="content" class="ui-content" >
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto quod itaque, adipisci fuga ad! Fugit itaque nisi porro reprehenderit tempora culpa asperiores a maxime qui ad quasi architecto ullam, beatae.</p>
+        </article>
+        <!-- Footer -->
+        <div data-role="footer"> 
+            <div data-role="navbar">
+                <ul>
+                    <li><a href="#step4" class="ui-btn" data-icon="home" data-iconpos="top">Back</a>
+                    </li>
+                    <li><a href="#step6" class="ui-btn" data-icon="info" data-iconpos="top">Next</a>
+                   </li>
+                </ul>
+            </div>
+        </div>
+   </section>
+   <!-- Step 6 -->
+    <section data-role="page" id="step6" data-dialog="true">
+        <!-- Header -->
+        <div data-role="header">
+           <h1>Step 6</h1> 
+        </div>
+        <!-- Content -->
+        <article data-role="content" class="ui-content" >
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto quod itaque, adipisci fuga ad! Fugit itaque nisi porro reprehenderit tempora culpa asperiores a maxime qui ad quasi architecto ullam, beatae.</p>
+        </article>
+        <!-- Footer -->
+        <div data-role="footer"> 
+            <div data-role="navbar">
+                <ul>
+                    <li><a href="#step5" class="ui-btn" data-icon="home" data-iconpos="top">Back</a>
+                    </li>
+                    <li><a href="#finish" class="ui-btn" data-icon="info" data-iconpos="top">Next</a>
+                   </li>
+                </ul>
+            </div>
+        </div>
+   </section>
+    <!-- Finish Page -->
+    <section data-role="page" id="finish" data-dialog="true">
+        <!-- Header -->
+        <div data-role="header">
+           <h1>We're All Done</h1> 
+        </div>
+        <!-- Content -->
+        <article data-role="content" class="ui-content" >
+            <p>I hope this method helps you to keep your car in great shape and looking sharp!</p>
+        </article>
+        <!-- Footer -->
+        <div data-role="footer"> 
+            <div data-role="navbar">
+                <ul>
+                    <li><a href="#step6" class="ui-btn" data-icon="home" data-iconpos="top">Back</a>
+                    </li>
+                    <li><a href="#home" class="ui-btn" data-icon="info" data-iconpos="top">Finish</a>
+                   </li>
+                </ul>
+            </div>
+        </div>
+   </section>
+
+
+
+
 </body>
 </html>

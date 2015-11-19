@@ -3,18 +3,12 @@
     margin: 0;
     padding: 0;
 }
-header {
-    padding: 40px;
-}
-.wrapper {
 
-}
-footer {
-    padding: 40px;
-    clear: both;
-}
 img {
-    width: 20%;
+    width: 60%;
     float: left;
     padding: 10px;
+}
+p {
+    margin: 0% 0% 10% 0%;
 }

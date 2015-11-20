@@ -5,6 +5,9 @@ $(document).on('mobileinit', function( ) {
     // or cross-domain requests for pages or data
  $.mobile.allowCrossDomainPages = true;
  $.support.cors = true;
+ $(function()) {
+   $("[data-role='header']", "[data-role='footer']").toolbar();
+   };
 }); 
 
 $("#home").on('pageinit', function( ) {
@@ -16,22 +19,24 @@ $("#home").on('pageinit', function( ) {
 
 
 // load new page
-$.mobile.pageContainer.pagecontainer("change", "#contact", {userCount:12});
+// We are loading the data-role page div with id="contact" and passing along the data object {userCount:12} which can be used on the next page.
+// $.mobile.pageContainer.pagecontainer("change", "#contact", {userCount:12});
 
 /// get id of new page on change
-
+/*
 $(document).on('pagechange', function (ev, data) {
 
  console.log(data.toPage.attr('id'));
 
 });
-
+*/
  
 
 // or similar, an event specific to each div#id
-
+/*
 $('#lesson1').on('pageshow', function (ev, data) {
 
   console.log("lesson 1 shown");
 
 });
+*/

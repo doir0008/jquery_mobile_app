@@ -3,12 +3,24 @@
     margin: 0;
     padding: 0;
 }
-
 img {
     width: 50%;
     float: left;
     padding: 10px;
 }
-p {
-    margin: 0% 0% 10% 0%;
+#home p {
+    padding: 1rem 1rem 1rem 1rem;
+    margin: 0rem 0rem 1rem 0rem;
 }
+#home h2 {
+    text-align: center;
+}
+#home:nth-child(5){
+    padding-top: 1rem;
+}
+#home img {
+    float: none;
+    width: 100%;
+    padding: 0;
+}
+

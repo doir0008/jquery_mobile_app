@@ -1,3 +1,5 @@
+var lastPageViewed = "";
+
 $(document).on('mobileinit', function( ) {
     // our code goes here to override any settings
     // this event runs as jQuery starts to prepare the page as a jQuery Mobile page
@@ -5,16 +7,25 @@ $(document).on('mobileinit', function( ) {
     // or cross-domain requests for pages or data
  $.mobile.allowCrossDomainPages = true;
  $.support.cors = true;
- $(function()) {
-   $("[data-role='header']", "[data-role='footer']").toolbar();
-   };
+
 }); 
 
 $("#home").on('pageinit', function( ) {
     //inside here is where we place code that runs when a page has been enhanced
     //here we can start to work with the jQuery elements on the page.
+    
+
 });
 
+$(document).on('pagechange', function (ev, data) {
+    if (data.toPage.attr('id') !== "home") {
+        if (data.toPage.attr('id') !== "info") {
+            lastPageViewed = data.toPage.attr('id'); 
+            console.log(data.toPage.attr('id'));
+            console.log(lastPageViewed);
+        };
+    };
+});
 
 
 
@@ -29,6 +40,15 @@ $(document).on('pagechange', function (ev, data) {
  console.log(data.toPage.attr('id'));
 
 });
+
+
+ $(function()) {
+   $("[data-role='header']", "[data-role='footer']").toolbar();
+   };
+
+
+
+
 */
  
 

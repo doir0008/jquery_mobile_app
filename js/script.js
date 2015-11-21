@@ -1,62 +1,35 @@
-var lastPageViewed = "";
+var lastPageViewed = "step1";
 
 $(document).on('mobileinit', function( ) {
-    // our code goes here to override any settings
-    // this event runs as jQuery starts to prepare the page as a jQuery Mobile page
-    // here we would set up default messages to the user and time delays for events like taphold.
-    // or cross-domain requests for pages or data
  $.mobile.allowCrossDomainPages = true;
  $.support.cors = true;
-
 }); 
 
 $("#home").on('pageinit', function( ) {
-    //inside here is where we place code that runs when a page has been enhanced
-    //here we can start to work with the jQuery elements on the page.
-    
+});
 
+$(document).on("click", "#tutorial", function( ev ){
+    // console.log("click event ran!");
+    if (lastPageViewed != false) {
+        $.mobile.pageContainer.pagecontainer("change", "#" + lastPageViewed, {lastPageViewed});
+        // console.log("did the page redirect");
+    };
+});
+
+$(document).on("tap", "tutorial", function (ev){
+    // console.log("click event ran!");
+    if (lastPageViewed != false) {
+        $.mobile.pageContainer.pagecontainer("change", "#" + lastPageViewed, {lastPageViewed});
+        // console.log("did the page redirect");
+    };
 });
 
 $(document).on('pagechange', function (ev, data) {
     if (data.toPage.attr('id') !== "home") {
         if (data.toPage.attr('id') !== "info") {
             lastPageViewed = data.toPage.attr('id'); 
-            console.log(data.toPage.attr('id'));
-            console.log(lastPageViewed);
+            // console.log(lastPageViewed);
         };
     };
 });
 
-
-
-// load new page
-// We are loading the data-role page div with id="contact" and passing along the data object {userCount:12} which can be used on the next page.
-// $.mobile.pageContainer.pagecontainer("change", "#contact", {userCount:12});
-
-/// get id of new page on change
-/*
-$(document).on('pagechange', function (ev, data) {
-
- console.log(data.toPage.attr('id'));
-
-});
-
-
- $(function()) {
-   $("[data-role='header']", "[data-role='footer']").toolbar();
-   };
-
-
-
-
-*/
- 
-
-// or similar, an event specific to each div#id
-/*
-$('#lesson1').on('pageshow', function (ev, data) {
-
-  console.log("lesson 1 shown");
-
-});
-*/

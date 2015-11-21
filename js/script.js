@@ -2,12 +2,10 @@ if (localStorage.getItem("lastPageViewed") == false) {
     localStorage.setItem("lastPageViewed", "step1");
 }
 
-/*
 $(document).on('mobileinit', function( ) {
  $.mobile.allowCrossDomainPages = true;
  $.support.cors = true;
 });
-*/
 
 // $("#home").on('pageinit', function( ) {});
 
